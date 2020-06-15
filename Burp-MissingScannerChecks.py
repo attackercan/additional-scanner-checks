@@ -178,7 +178,10 @@ class BurpExtender(IBurpExtender, IScannerCheck, IScanIssue, ITab):
 
     def getUiComponent(self):
         return self.tab
-
+    
+    def doActiveScan(self, baseRequestResponse, insertionPoint):
+        pass
+    
     ### IScannerCheck ###
     def doPassiveScan(self, baseRequestResponse):
         if not self.cbPassiveChecks.isSelected():
